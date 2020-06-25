@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Made By Krishan and Ishant</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        height: 400px;
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-repeat: no-repeat;
+        padding: 40px;
+        /* background-color: red; */
+        border-radius: 10px;
+        background-image: linear-gradient(
+          75deg,
+          #00f 25%,
+          #4caf50 25% 70%,
+          #00f 70%
+        );
+      }
+      .inner-div {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .speedometer {
+        position: relative;
+        z-index: 1;
+        height: 350px;
+        width: 350px;
+        border-radius: 175px;
+        background-color: #f3f3f3;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* align-self: flex-end; */
+      }
+      .inner-circle {
+        position: absolute;
+        z-index: 2;
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        box-shadow: 0 4px 8px 0 rgba(5, 5, 5, 0.2),
+          0 6px 20px 0 rgba(5, 5, 5, 0.4);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .score {
+        height: 160px;
+        width: 160px;
+        border-radius: 80px;
+        background-color: #4caf50;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 900;
+      }
+      p {
+        margin: 3px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+      p:first-child {
+        font-size: 40px;
+      }
+      .triangle {
+        width: 0;
+        height: 0;
+        border-left: 450px solid transparent;
+        border-right: 450px solid transparent;
+        border-bottom: 175px solid #fff;
+        align-self: flex-end;
+      }
+      .knob {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent;
+        border-bottom: 140px solid #666;
+        align-self: flex-start;
+        transform: translate(50px, 85px) rotate(65deg);
+      }
+      .speed-container {
+        position: relative;
+        height: 366px;
+        width: 366px;
+        border-radius: 183px;
+        /* overflow: hidden; */
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(75deg, #f00, yellow, #4caf50);
+      }
+      .indication-circle {
+        position: absolute;
+        z-index: 2;
+        height: 18px;
+        width: 18px;
+        border-radius: 24px;
+        align-self: flex-start;
+        transform: translate(165px, 100px);
+        border: 8px solid #4caf50;
+        background-color: #fff;
+      }
+      .jaadoo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* background-color: red; */
+        border-radius: 50%;
+      }
+      .inner-jaadoo {
+        height: 60%;
+        width: 500px;
+        background-color: #fff;
+        transform: rotate(-24deg) translateY(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-div">
+        <div class="speed-container">
+          <div class="speedometer">
+            <div class="inner-circle">
+              <div class="score">
+                <p>790</p>
+                <p>Good Job!</p>
+              </div>
+            </div>
+            <div class="triangle"></div>
+            <div class="knob"></div>
+          </div>
+          <div class="indication-circle"></div>
+          <div class="jaadoo">
+            <div class="inner-jaadoo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
