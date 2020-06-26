@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Simple meter in css</title>
+    <title>METER IN CSS</title>
     <style>
       body {
         height: 100vh;
@@ -164,28 +164,89 @@
         border-right: 60px solid transparent;
         border-top: 130px solid transparent;
       }
+      .ishant {
+        height: 60px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 5px;
+        animation: linearGradientName 0.1s ease-in-out infinite;
+        animation-direction: alternate-reverse;
+      }
+      @keyframes linearGradientName {
+        0% {
+          background-image: linear-gradient(
+            115deg,
+            #4fcf70,
+            #fad648,
+            #a767e5,
+            #12bcfe,
+            #44ce7b
+          );
+        }
+        100% {
+          background-image: linear-gradient(
+            115deg,
+            #44ce7b,
+            #12bcfe,
+            #a767e5,
+            #fad648,
+            #4fcf70
+          );
+        }
+      }
+      .inner-ishant-div {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma,
+          Sans-Serif;
+        font-size: 22px;
+        font-weight: 900;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="inner-div">
-        <div class="speed-container">
-          <div class="speedometer">
-            <div class="inner-circle">
-              <div class="score">
-                <p>790</p>
-                <p>Good Job!</p>
+    <div style="display: flex; flex-direction: column;">
+      <div class="container">
+        <div class="inner-div">
+          <div class="speed-container">
+            <div class="speedometer">
+              <div class="inner-circle">
+                <div class="score">
+                  <p>790</p>
+                  <p>Good Job!</p>
+                </div>
+              </div>
+              <div class="triangle"></div>
+              <div class="knob">
+                <div id="triangle-up"></div>
+                <div id="triangle-down"></div>
               </div>
             </div>
-            <div class="triangle"></div>
-            <div class="knob">
-              <div id="triangle-up"></div>
-              <div id="triangle-down"></div>
+            <div class="indication-circle"></div>
+            <div class="jaadoo">
+              <div class="inner-jaadoo"></div>
             </div>
           </div>
-          <div class="indication-circle"></div>
-          <div class="jaadoo">
-            <div class="inner-jaadoo"></div>
+        </div>
+      </div>
+      <br />
+      <div
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+        "
+      >
+        <div class="ishant">
+          <div class="inner-ishant-div">
+            Ishant
           </div>
         </div>
       </div>
