@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>METER IN CSS</title>
+    <title>Made By Krishan and Ishant</title>
     <style>
       body {
         height: 100vh;
@@ -97,13 +97,16 @@
       }
       .knob {
         position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 90px solid transparent;
-        border-right: 90px solid transparent;
-        border-bottom: 140px solid #666;
-        align-self: flex-start;
-        transform: translate(50px, 85px) rotate(65deg);
+        animation: rotatedial 2s infinite;
+        animation-direction: alternate-reverse;
+      }
+      @keyframes rotatedial {
+        0% {
+          transform: rotate(-110deg);
+        }
+        100% {
+          transform: rotate(65deg);
+        }
       }
       .speed-container {
         position: relative;
@@ -145,6 +148,22 @@
         background-color: #fff;
         transform: rotate(-24deg) translateY(100px);
       }
+
+      #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 130px solid #666;
+      }
+
+      #triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 130px solid transparent;
+      }
     </style>
   </head>
   <body>
@@ -159,7 +178,10 @@
               </div>
             </div>
             <div class="triangle"></div>
-            <div class="knob"></div>
+            <div class="knob">
+              <div id="triangle-up"></div>
+              <div id="triangle-down"></div>
+            </div>
           </div>
           <div class="indication-circle"></div>
           <div class="jaadoo">
